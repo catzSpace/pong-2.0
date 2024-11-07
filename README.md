@@ -22,3 +22,11 @@ Para de ese modo adjudicarle los permisos necesarios al script. Una vez creado e
 ```
 ./pong!
 ```
+
+## Capturas
+
+![Screenshot_2024-11-07-17-17-00_1920x1080](https://github.com/user-attachments/assets/f719fbcd-2677-45a1-a420-86310c416ee3)
+
+---
+
+![Screenshot_2024-11-07-17-17-07_1920x1080](https://github.com/user-attachments/assets/b40887f5-35ef-4527-ae4d-27853564dd1c)
