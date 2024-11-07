@@ -31,5 +31,15 @@ void Menus::InitMenu(RenderWindow& app, int p1, int p2){
   score.setPosition(940, 20);
   score.setFillColor(Color::White);
 
+  Text pause;
+
+  pause.setFont(font);
+  pause.setString("|| esc");
+  pause.setCharacterSize(30);
+  pause.setPosition(40, 20);
+  pause.setFillColor(Color::White);
+
+
   app.draw(score);
+  app.draw(pause);
 }

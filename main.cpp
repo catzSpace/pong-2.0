@@ -17,7 +17,7 @@ void renderInicio(RenderWindow& App, Text tittle[4], const string str[4], const 
 
   //error (en caso de no encontrar la fuente)
   if(!font.loadFromFile("./assets/slkscrb.ttf")){
-    cout << "error" <<endl;
+    std::cout << "error \n";
 
     system("pause"); 
   }
@@ -38,6 +38,7 @@ void renderInicio(RenderWindow& App, Text tittle[4], const string str[4], const 
 }
 
 void pantallaInicio(RenderWindow& App){
+
   Text titulo, enter, autor, version;
   const std::string componentes[4] = {"PonG!", "-Press Enter-", "catzspace", "2.0"};
   Text nombres[4] = {titulo, enter, autor, version};
@@ -54,7 +55,11 @@ void pantallaInicio(RenderWindow& App){
 }
 
 
+/* MAIN FUNCTION */
+
+
 int main(){
+
   RenderWindow App(VideoMode::getDesktopMode(), "Pong!", Style::Fullscreen);
   //system("bspc node -t floating>2");
   App.setActive();
@@ -66,7 +71,7 @@ int main(){
   int yp2 = 400;
 
   // velocidad de la pelota
-  int x = 2, y = 2; 
+  int x = 3, y = 3; 
 
   // score 
   int s1 = 0, s2 = 0; 
@@ -83,7 +88,7 @@ int main(){
 
   while (App.isOpen())
   {
-        // Eventos
+      // Eventos
       Event event;
       while (App.pollEvent(event))
       {
