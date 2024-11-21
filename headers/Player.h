@@ -17,7 +17,7 @@ class Player{
 
   public:
     void renderPlayer(RenderWindow& app);
-    void movePlayer(int p);
+    void movePlayer(int p, int alto, int ancho);
     int getPositionX();
     int getPositionY();
     

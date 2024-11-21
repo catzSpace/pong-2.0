@@ -24,6 +24,7 @@ void renderInicio(RenderWindow& App, Text tittle[4], const string str[4], const 
 
 
   for (int i = 0; i < 4; i++){
+
     tittle[i].setFont(font);
     tittle[i].setString(str[i]);
 
@@ -42,7 +43,9 @@ void pantallaInicio(RenderWindow& App){
   Text titulo, enter, autor, version;
   const std::string componentes[4] = {"PonG!", "-Press Enter-", "catzspace", "2.0"};
   Text nombres[4] = {titulo, enter, autor, version};
+
   const int medidas[4][3] = {
+ /*  size   x    y  */
     {130, 690, 380},
     {27, 810, 520},
     {27, 20, 17},
@@ -63,6 +66,9 @@ int main(){
   RenderWindow App(VideoMode::getDesktopMode(), "Pong!", Style::Fullscreen);
   //system("bspc node -t floating>2");
   App.setActive();
+
+  int ancho = VideoMode::getDesktopMode().width;
+  int alto = VideoMode::getDesktopMode().height;
 
   bool status = false;
   
@@ -115,8 +121,8 @@ int main(){
         player1.renderPlayer(App);
         player2.renderPlayer(App);
 
-        player1.movePlayer(1);
-        player2.movePlayer(2);
+        player1.movePlayer(1, alto, ancho);
+        player2.movePlayer(2, alto, ancho);
 
         // posiciones x, y de ambos jugadores
         int p1x = player1.getPositionX();

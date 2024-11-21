@@ -14,25 +14,25 @@ void Player::renderPlayer(RenderWindow& app){
 
 
 // movimiento del jugador
-void Player::movePlayer( int p ){
+void Player::movePlayer( int p , int alto, int ancho){
 
-  // p = numero del jugador 1 o 2
-  // TODO colision con el escenario
+
+  int py = playerRec.getPosition().y;
 
   if (p == 1){
-    if (Keyboard::isKeyPressed(Keyboard::Key::E)){
+    if (Keyboard::isKeyPressed(Keyboard::Key::E) && py >= 0){
       playerRec.move(0, -1.5);
     }
-    if (Keyboard::isKeyPressed(Keyboard::Key::D)){
+    if (Keyboard::isKeyPressed(Keyboard::Key::D) && py + 300 <= alto){
       playerRec.move(0, 1.5);
     }
   }
 
   if (p == 2) {
-    if (Keyboard::isKeyPressed(Keyboard::Key::U)){
+    if (Keyboard::isKeyPressed(Keyboard::Key::U) && py >= 0){
       playerRec.move(0, -1.5);
     }
-    if (Keyboard::isKeyPressed(Keyboard::Key::J)){
+    if (Keyboard::isKeyPressed(Keyboard::Key::J) && py + 300 <= alto){
       playerRec.move(0, 1.5);
     }
 
